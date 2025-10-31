@@ -51,7 +51,7 @@ rm -rf checkpoints/${TAG}-download
 ### From Meta
 
 ```bash
-TAG=public_v0
+TAG=public_v1
 CHECKPOINT_PATH=checkpoints/${TAG}
 FILES=(
     pipeline.yaml

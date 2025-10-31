@@ -33,7 +33,7 @@ sys.path.append("notebook")
 from inference import Inference, load_image
 
 # load model
-tag = "public_v0"
+tag = "public_v1"
 config_path = f"checkpoints/{tag}/pipeline.yaml"
 inference = Inference(config_path, compile=False)
 
