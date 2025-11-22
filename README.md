@@ -51,21 +51,15 @@ The following comparison demonstrates the improvement of multi-view reconstructi
 <tr>
   <td align="center" width="33%" style="padding: 5px;">
     <b>3D Result</b><br>
-    <video width="100%" controls style="max-width: 300px; display: block;">
-      <source src="data/example/visualization_results/view3_cropped.mp4" type="video/mp4">
-    </video>
+    <img src="data/example/visualization_results/view3_cropped.gif" width="100%" style="max-width: 300px;"/>
   </td>
   <td align="center" width="33%" style="padding: 5px;">
     <b>3D Result</b><br>
-    <video width="100%" controls style="max-width: 300px; display: block;">
-      <source src="data/example/visualization_results/view6_cropped.mp4" type="video/mp4">
-    </video>
+    <img src="data/example/visualization_results/view6_cropped.gif" width="100%" style="max-width: 300px;"/>
   </td>
   <td align="center" width="33%" style="padding: 5px;">
     <b>3D Result</b><br>
-    <video width="100%" controls style="max-width: 300px; display: block;">
-      <source src="data/example/visualization_results/all_views_cropped.mp4" type="video/mp4">
-    </video>
+    <img src="data/example/visualization_results/all_views_cropped.gif" width="100%" style="max-width: 300px;"/>
   </td>
 </tr>
 <tr>
