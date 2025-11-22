@@ -29,16 +29,16 @@ The following comparison demonstrates the improvement of multi-view reconstructi
     <b>Input Images</b><br>
     <table width="100%" cellpadding="2" cellspacing="2">
     <tr>
-      <td align="center"><img src="data/example/images/1.png" width="60px"/></td>
-      <td align="center"><img src="data/example/images/2.png" width="60px"/></td>
-      <td align="center"><img src="data/example/images/3.png" width="60px"/></td>
-      <td align="center"><img src="data/example/images/4.png" width="60px"/></td>
+      <td align="center"><img src="data/example/images/1.png" width="80px"/></td>
+      <td align="center"><img src="data/example/images/2.png" width="80px"/></td>
+      <td align="center"><img src="data/example/images/3.png" width="80px"/></td>
+      <td align="center"><img src="data/example/images/4.png" width="80px"/></td>
     </tr>
     <tr>
-      <td align="center"><img src="data/example/images/5.png" width="60px"/></td>
-      <td align="center"><img src="data/example/images/6.png" width="60px"/></td>
-      <td align="center"><img src="data/example/images/7.png" width="60px"/></td>
-      <td align="center"><img src="data/example/images/8.png" width="60px"/></td>
+      <td align="center"><img src="data/example/images/5.png" width="80px"/></td>
+      <td align="center"><img src="data/example/images/6.png" width="80px"/></td>
+      <td align="center"><img src="data/example/images/7.png" width="80px"/></td>
+      <td align="center"><img src="data/example/images/8.png" width="80px"/></td>
     </tr>
     </table>
   </td>
@@ -51,23 +51,20 @@ The following comparison demonstrates the improvement of multi-view reconstructi
 <tr>
   <td align="center" width="33%" style="padding: 5px;">
     <b>3D Result</b><br>
-    <video width="100%" controls style="max-width: 300px;">
+    <video width="100%" controls style="max-width: 300px; display: block;">
       <source src="data/example/visualization_results/view3_cropped.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
   </td>
   <td align="center" width="33%" style="padding: 5px;">
     <b>3D Result</b><br>
-    <video width="100%" controls style="max-width: 300px;">
+    <video width="100%" controls style="max-width: 300px; display: block;">
       <source src="data/example/visualization_results/view6_cropped.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
   </td>
   <td align="center" width="33%" style="padding: 5px;">
     <b>3D Result</b><br>
-    <video width="100%" controls style="max-width: 300px;">
+    <video width="100%" controls style="max-width: 300px; display: block;">
       <source src="data/example/visualization_results/all_views_cropped.mp4" type="video/mp4">
-      Your browser does not support the video tag.
     </video>
   </td>
 </tr>
