@@ -67,6 +67,70 @@ For  more details and multi-object reconstruction, please take a look at out two
 * [single object](notebook/demo_single_object.ipynb)
 * [multi object](notebook/demo_multi_object.ipynb)
 
+## Multi-View 3D Reconstruction
+
+SAM 3D Objects now supports multi-view 3D reconstruction using a training-free multidiffusion approach. This allows you to generate consistent 3D models from multiple input images of the same object from different viewpoints.
+
+### Quick Start
+
+Use the `run_inference.py` script for both single-view and multi-view reconstruction:
+
+```bash
+# Multi-view reconstruction (mask_prompt=None, images and masks in same directory)
+python run_inference.py --input_path ./data/images_and_masks
+
+# Single-view reconstruction (specify a single view)
+python run_inference.py --input_path ./data/images_and_masks --views 1
+
+# Multi-view reconstruction (mask_prompt!=None, images in images/, masks in {mask_prompt}/)
+python run_inference.py --input_path ./data --mask_prompt stuffed_toy
+
+# Multi-view reconstruction (specify specific views)
+python run_inference.py --input_path ./data --mask_prompt stuffed_toy --views 1,2,3,4
+```
+
+### Data Structure
+
+Multi-view data can be organized in two ways:
+
+**Structure 1** (when `mask_prompt=None`): Images and masks in the same directory
+```
+input_path/
+    ├── 1.png          # Original image (PNG format)
+    ├── 1_mask.png     # Mask (RGBA format, alpha channel stores mask info)
+    ├── 2.png
+    ├── 2_mask.png
+    └── ...
+```
+
+**Structure 2** (when `mask_prompt!=None`, e.g., `mask_prompt="stuffed_toy"`): Images and masks in separate directories
+```
+input_path/
+    ├── images/
+    │   ├── 1.png
+    │   ├── 2.png
+    │   └── ...
+    └── stuffed_toy/  (or {mask_prompt}/)
+        ├── 1.png (or 1_mask.png)
+        ├── 2.png (or 2_mask.png)
+        └── ...
+```
+
+**Mask Format**: RGBA format where the alpha channel stores mask information (alpha=255 for object, alpha=0 for background).
+
+### Command Line Options
+
+Run `python run_inference.py --help` for full documentation. Key parameters:
+
+- `--input_path`: Path to input directory (required)
+- `--mask_prompt`: Mask folder name. If None, images and masks are in the same directory; if specified, images are in `input_path/images/` and masks are in `input_path/{mask_prompt}/`
+- `--views`: View indices, e.g., `"1,2,3"` or `"1"` (if not specified, uses all available views)
+- `--decode_formats`: Output formats, e.g., `"gaussian,mesh"` or `"gaussian"` (default: `gaussian,mesh`)
+- `--mesh_postprocess`: Enable mesh post-processing
+- `--texture_baking`: Enable texture baking for GLB files
+- `--vertex_color`: Use vertex colors (default: True)
+
+The script automatically detects whether to use single-view or multi-view inference based on the number of views provided. Multi-view reconstruction uses a training-free multidiffusion approach to fuse predictions from all views.
 
 ## SAM 3D Body
 
