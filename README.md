@@ -1,3 +1,12 @@
+> 📢 **Update**: We are developing an **enhanced version** with adaptive 
+> multi-view fusion based on attention entropy! Our new approach uses per-latent 
+> weighting to intelligently combine information from multiple views.
+> 
+> 🔗 Check out **[MV-SAM3D](https://github.com/YOUR_USERNAME/MV-SAM3D)** for our 
+> latest improvements and ongoing research.
+
+---
+
 # SAM 3D Objects (Multi-View Extension)
 
 This is a fork of [SAM 3D Objects](https://github.com/facebookresearch/sam-3d-objects) with **multi-view 3D reconstruction** support.
