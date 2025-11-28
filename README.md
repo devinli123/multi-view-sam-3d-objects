@@ -2,7 +2,7 @@
 > multi-view fusion based on attention entropy! Our new approach uses per-latent 
 > weighting to intelligently combine information from multiple views.
 > 
-> 🔗 Check out **[MV-SAM3D](https://github.com/YOUR_USERNAME/MV-SAM3D)** for our 
+> 🔗 Check out **[MV-SAM3D](https://github.com/devinli123/MV-SAM3D)** for our 
 > latest improvements and ongoing research.
 
 ---
